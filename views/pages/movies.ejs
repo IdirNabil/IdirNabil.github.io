@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../public/style.css" />
+    <title>expressmovie</title>
+  </head>
+
+  <body>
+    <header><%- include('../partials/header.ejs'); %></header>
+
+    <h1><%= titleATP %></h1>
+    <div>
+      <ul>
+        <% moviesATP.forEach(function(movie){ %>
+        <li><%= movie.title %> : <%= movie.year %></li>
+        <% }); %>
+      </ul>
+    </div>
+    <form action="/movies" method="POST">
+      <label for="movieTitle">Titre: </label
+      ><input type="text" name="movieTitle" id="movieTitle" />
+      <label for="movieYear">Année: </label
+      ><input type="text" name="movieYear" id="movieYear" />
+      <button type="submit">Ajouter</button>
+    </form>
+
+    <footer><%- include('../partials/footer.ejs'); %></footer>
+  </body>
+</html>
