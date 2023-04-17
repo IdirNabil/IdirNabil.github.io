@@ -22,6 +22,11 @@ app.get('/', (req, res) => {
     res.render('index.ejs')
 });
 
+app.get('/jeux', (req, res) => {    
+    res.render('pages/index_jeux.ejs')
+});
+
+
 app.get('/movies', async (req, res) => {
     const titleATP  = 'films anthropocene'
     const moviesATP_MySQL = await getMovies()
