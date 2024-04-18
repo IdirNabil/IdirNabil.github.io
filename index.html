@@ -9,15 +9,16 @@
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        background: url("images/pic10.jpg") top left / cover no-repeat,
-          url("images/pic11.jpg") top right / cover no-repeat,
-          url("images/pic12.jpg") bottom left / cover no-repeat,
-          url("images/pic13.jpg") bottom right / cover no-repeat;
+        background-image: url("images/pic10.jpg"), url("images/pic11.jpg"),
+          url("images/pic12.jpg"), url("images/pic13.jpg");
+        background-repeat: no-repeat;
+        background-size: 50% 50%;
+        background-position: top left, top right, bottom left, bottom right;
       }
 
       .container {
-        width: 100%; /* Ajustement de la largeur */
-        height: 100vh; /* Ajustement de la hauteur pour remplir toute la page */
+        width: 100%;
+        height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -33,7 +34,7 @@
       }
       form {
         max-width: 300px;
-        width: 100%; /* Ajustement de la largeur */
+        width: 100%;
         margin: 0 auto;
       }
       input[type="text"],
