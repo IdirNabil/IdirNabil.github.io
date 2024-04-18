@@ -9,36 +9,10 @@
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-      }
-      .background {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-      }
-      .background img {
-        position: absolute;
-        width: 50%;
-        height: 50%;
-        object-fit: cover;
-      }
-      .image1 {
-        top: 0;
-        left: 0;
-      }
-      .image2 {
-        top: 0;
-        right: 0;
-      }
-      .image3 {
-        bottom: 0;
-        left: 0;
-      }
-      .image4 {
-        bottom: 0;
-        right: 0;
+        background: url("images/pic10.jpg") top left / cover no-repeat,
+          url("images/pic11.jpg") top right / cover no-repeat,
+          url("images/pic12.jpg") bottom left / cover no-repeat,
+          url("images/pic13.jpg") bottom right / cover no-repeat;
       }
 
       .container {
@@ -79,13 +53,6 @@
     </style>
   </head>
   <body>
-    <div class="background">
-      <img class="image1" src="images/pic10.jpg" alt="" />
-      <img class="image2" src="images/pic11.jpg" alt="" />
-      <img class="image3" src="images/pic12.jpg" alt="" />
-      <img class="image4" src="images/pic13.jpg" alt="" />
-    </div>
-
     <div class="container">
       <h2>Bienvenue chez le site IDIR</h2>
 
