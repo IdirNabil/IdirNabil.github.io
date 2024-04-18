@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulaire de Connexion</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      form {
+        max-width: 300px;
+        margin: 0 auto;
+      }
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        box-sizing: border-box;
+      }
+      input[type="submit"] {
+        width: 100%;
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Connexion</h2>
+
+    <form id="loginForm">
+      <label for="username">Nom d'utilisateur :</label>
+      <input type="text" id="username" name="username" required />
+
+      <label for="password">Mot de passe :</label>
+      <input type="password" id="password" name="password" required />
+
+      <input type="submit" value="Connexion" />
+    </form>
+
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent the form from submitting
+
+          // Récupérer les valeurs des champs
+          var username = document.getElementById("username").value;
+          var password = document.getElementById("password").value;
+
+          // Vérifier les valeurs (ceci est un exemple, veuillez utiliser un stockage sécurisé et une méthode de hachage pour les mots de passe dans un environnement réel)
+          if (username === "utilisateur" && password === "motdepasse") {
+            alert("Connexion réussie !");
+            // Vous pouvez rediriger l'utilisateur vers une autre page ici
+          } else {
+            alert("Nom d'utilisateur ou mot de passe incorrect !");
+          }
+        });
+    </script>
+  </body>
+</html>
