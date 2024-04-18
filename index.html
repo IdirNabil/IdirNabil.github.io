@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,20 +16,24 @@
       }
 
       .container {
-        max-width: 400px;
-        margin: 100px auto;
+        width: 100%; /* Ajustement de la largeur */
+        height: 100vh; /* Ajustement de la hauteur pour remplir toute la page */
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: rgba(255, 255, 255, 0.7);
         padding: 20px;
         border-radius: 10px;
-        border: 2px solid #ccc; /* Ajout d'une bordure de 2px solide couleur grise */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre */
-        position: relative; /* Ajout pour que le contenu reste au-dessus de l'image de fond */
+        border: 2px solid #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        position: relative;
       }
       h2 {
         text-align: center;
       }
       form {
         max-width: 300px;
+        width: 100%; /* Ajustement de la largeur */
         margin: 0 auto;
       }
       input[type="text"],
@@ -57,14 +61,11 @@
   <body>
     <div class="container">
       <h2>Bienvenue chez le site IDIR</h2>
-
       <form id="loginForm">
         <label for="username">Nom d'utilisateur :</label>
         <input type="text" id="username" name="username" required />
-
         <label for="password">Mot de passe :</label>
         <input type="password" id="password" name="password" required />
-
         <input type="submit" value="Connexion" />
       </form>
     </div>
@@ -73,13 +74,9 @@
       document
         .getElementById("loginForm")
         .addEventListener("submit", function (event) {
-          event.preventDefault(); // Prevent the form from submitting
-
-          // Récupérer les valeurs des champs
+          event.preventDefault();
           var username = document.getElementById("username").value;
           var password = document.getElementById("password").value;
-
-          // Vérifier les valeurs (ceci est un exemple, veuillez utiliser un stockage sécurisé et une méthode de hachage pour les mots de passe dans un environnement réel)
           if (
             (username === "user" && password === "password") ||
             (username === "baby" && password === "baby")
